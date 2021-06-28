@@ -1,0 +1,115 @@
+@import (reference) '../../less/variables.less';
+
+.creating {
+  background-color: transparent;
+
+  &__item {
+    position: relative;
+    box-shadow: 0.5px 3px 10px rgba(1, 46, 59, 0.1);
+    border-radius: 8px;
+    background-color: @color-white;
+    padding: 12px;
+    z-index: 1;
+    transition: background-color @transition;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &:hover {
+      background-color: #f5f9fb;
+
+      .creating__link::after {
+        background-color: @color-lightest;
+      }
+  
+      .creating__link:active::after,
+      .creating__link:active::before {
+        transition: none;
+        background-color: @color-primary-light;
+      }  
+    }
+
+    &:active {
+      background-color: #86bccc;
+
+      .creating__link{
+        color: @color-white;
+  
+        .creating__svg  {
+          fill: @color-white;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 24px;
+
+    &::before {
+      display: block;
+      content: "";
+      background-color: @color-lightest;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      bottom: 6px;
+      z-index: -1;
+      transition: background-color @transition;
+    }
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+    margin-left: -34px;
+  }
+}
+
+@media(min-width: @tablet) {
+  .creating {
+    background-color: @color-lightest;
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+      grid-gap: 30px;
+    }
+
+    &__item {
+      padding: 16px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &__link {
+      font-size: 15px;
+
+      &::before {
+        width: 64px;
+        height: 64px;;
+      }
+    }
+
+    &__svg {
+      width: 40px;
+      height: 40px;
+      margin-left: -52px;
+    }
+  }
+}

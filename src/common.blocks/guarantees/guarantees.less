@@ -1,0 +1,44 @@
+@import (reference) '../../less/variables.less';
+
+.guarantees {
+  position: relative;
+  background-color: @color-lightest;
+
+  &__subtitle {
+    color: @text-gray;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  &__bottom {
+    margin-bottom: 40px;
+  }
+}
+
+@media(min-width: @laptop) {
+  .guarantees {
+    &__subtitle {
+      font-size: 18px;
+    }
+
+    &__content {
+      flex-direction: column;
+      padding-bottom: 180px;
+    }
+
+    &__bottom {
+      // margin: 0 auto;
+    }
+
+    &__top {
+      margin-bottom: 60px;
+    }
+  }
+}

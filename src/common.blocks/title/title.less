@@ -1,0 +1,63 @@
+@import (reference) '../../less/variables.less';
+
+.title {
+  &_white {
+    color: @text-white;
+  }
+
+  &_main {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__colored {
+    color: @color-brand;
+  }
+  
+  &_block {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  &_size_m {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &_section {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 32px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      background-color: @color-brand;
+    }
+  }
+}
+
+@media(min-width: @laptop) {
+  .title {
+    &_main {
+      font-size: 45px;
+      line-height: 1.5;
+    }
+
+    &_section {
+      font-size: 32px;
+      line-height: 40px;
+
+      &::after {
+        width: 120px; 
+      }
+    }
+  }
+}

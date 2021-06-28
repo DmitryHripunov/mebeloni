@@ -1,0 +1,19 @@
+@import (reference) '../../less/variables.less';
+
+.clients {
+  &__list {
+    display: flex;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  &__item {
+    height: 132px;
+    width: 132px;
+    margin-right: 16px;
+    display: flex;
+    flex: 1 0 auto;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}

@@ -1,0 +1,123 @@
+@import (reference) '../../less/variables.less';
+
+.projects {
+  &__list {
+    padding-bottom: 52px;
+    // display: flex;
+    // overflow-y: auto;
+  }
+
+  &__item {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex: 1 0 auto;
+    width: 230px;
+    margin-right: 8px;
+    // scroll-snap-align: center;
+    // scroll-snap-stop: always;
+    border-radius: 8px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.58) 100%);
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #025C76;
+      opacity: 0;
+      transition: opacity @bezier;
+      z-index: 1;
+      border-radius: 8px;
+
+    }
+
+    &:hover::before {
+      opacity: .5;
+    }
+
+    &:hover {
+      .projects__item-content {
+        transform: translate(-50%, -75%);
+      }
+
+      .projects__img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__link {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 10;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform @bezier;
+  }
+
+  &__item-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 10;
+    transition: transform @bezier;
+  }
+
+  &__item-title,
+  &__item-footnote {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: @text-white;
+  }
+
+  .swiper-pagination {
+    bottom: 24px;
+  }
+
+  &__action {
+    text-align: center;
+  }
+}
+
+@media(min-width: @laptop) {
+  .projects {
+    &__item {
+      margin-right: 40px;
+    }
+
+    .pagination {
+      display: none;
+    }
+  }
+}

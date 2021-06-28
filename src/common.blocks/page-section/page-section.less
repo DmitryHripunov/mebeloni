@@ -1,0 +1,38 @@
+@import (reference) '../../less/variables.less';
+
+.page-section {
+  position: relative;
+  padding-bottom: 40px;
+  padding-top: 40px;
+
+  &_indent-small {
+    padding-bottom: 60px;
+  }
+
+  &_indent-huge {
+    padding-bottom: 40px;
+  }
+
+  &_mt {
+    margin-top: 0;
+  }
+
+  &_mobile {
+    padding-top: 0;
+  }
+}
+
+@media(min-width: @laptop) {
+  .page-section {
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+    &_mt {
+    margin-top: 98px;
+    }
+
+    &_indent-huge {
+      padding-bottom: 120px;
+    }
+  }
+}

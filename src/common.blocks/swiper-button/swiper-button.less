@@ -1,0 +1,45 @@
+@import (reference) '../../less/variables.less';
+
+.swiper-button {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+@media(min-width: @laptop) {
+  .swiper-button {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 46%;
+      background-image: none;
+      height: auto;
+
+      svg {
+        transition: fill @transition;
+        &:hover {
+          fill: @color-white;
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      left: 3vw;
+  
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  
+    .swiper-button-next {
+      right: 3vw;
+  
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import (reference) '../../less/variables.less';
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  // white-space: nowrap;
+  transition: background-color @transition;
+
+  &_brand {
+    background-color: @color-brand;
+
+    &:hover {
+      background-color: @color-brand-l;
+    }
+
+    &:active {
+      background-color: @color-brand-d;
+    }
+  }
+
+  &__icon {
+    margin-left: 8px;
+  }
+}
+
+@media(min-width: @laptop) {
+  .btn {
+    padding: 16px 20px;
+  }
+}

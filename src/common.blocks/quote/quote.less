@@ -1,0 +1,41 @@
+@import (reference) '../../less/variables.less';
+
+.quote {
+  display: none;
+}
+
+@media(min-width: @laptop) {
+  .quote {
+    display: block;
+
+    &__wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &__img-block {
+      flex: 1 1 auto;
+      width: 50%;
+      height: 600px;
+      margin-right: 40px;
+      background: url("img/quote_3.jpg") right bottom / 338px 370px no-repeat,
+      url("img/quote_2.jpg") top center/ 338px 370px no-repeat,
+      url("img/quote_1.jpg") left bottom / 346px no-repeat;
+    }
+
+    &__text-block {
+      margin-left: auto;
+      max-width: 545px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 48px;
+      margin-bottom: 24px;
+    }
+
+    &__desc {
+      color: @text-gray;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import (reference) '../../less/variables.less';
+
+.simplebar-scrollbar::before {
+  background-color: @color-brand;
+}
+
+.simplebar-content-wrapper {
+  scroll-snap-type: x mandatory;
+}
+
+.simplebar-content {
+  display: flex;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.simplebar-track.simplebar-horizontal  {
+  height: 4px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+  top: 0;
+  height: 4px;
+}
+
+.simplebar-track {
+  background-color: @color-white-d;
+  height: 4px;
+  bottom: 32px;
+}
+
+.simplebar-scrollbar {
+  background-color: @color-brand;
+  cursor: grab;
+}

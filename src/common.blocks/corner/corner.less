@@ -1,0 +1,52 @@
+@import (reference) '../../less/variables.less';
+
+.corner {
+  &::after {
+    position: absolute;
+    content: "";
+    top: -98px;
+    left: 0;
+    height: 98px;
+    width: 100%;
+    z-index: 1;
+    display: none;
+  }
+  
+  &_white {
+    &::after {
+      background-color: @color-white;
+    }
+  }
+
+  &_blue {
+    &::after {
+      background-color: @color-lightest;
+    }
+  }
+
+  &_darkest {
+    &::after {
+      background-color: @color-darkest;
+    }
+  }
+
+  &_right {
+    &::after {
+      clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    }
+  }
+
+  &_left {
+    &::after {
+      clip-path: polygon(100% 100%, 0 0, 0 100%);
+    }
+  }
+}
+
+@media(min-width: @laptop) {
+  .corner {
+    &::after {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import (reference) './variables.less';
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope-Thin.eot');
+  src: local('Manrope Thin'), local('Manrope-Thin'),
+      url('../assets/fonts/Manrope-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Manrope-Thin.woff2') format('woff2'),
+      url('../assets/fonts/Manrope-Thin.woff') format('woff'),
+      url('../assets/fonts/Manrope-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope-Light.eot');
+  src: local('Manrope Light'), local('Manrope-Light'),
+      url('../assets/fonts/Manrope-Light.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Manrope-Light.woff2') format('woff2'),
+      url('../assets/fonts/Manrope-Light.woff') format('woff'),
+      url('../assets/fonts/Manrope-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope-Regular.eot');
+  src: local('Manrope Regular'), local('Manrope-Regular'),
+      url('../assets/fonts/Manrope-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Manrope-Regular.woff2') format('woff2'),
+      url('../assets/fonts/Manrope-Regular.woff') format('woff'),
+      url('../assets/fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope-Medium.eot');
+  src: local('Manrope Medium'), local('Manrope-Medium'),
+      url('../assets/fonts/Manrope-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Manrope-Medium.woff2') format('woff2'),
+      url('../assets/fonts/Manrope-Medium.woff') format('woff'),
+      url('../assets/fonts/Manrope-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope-Semibold.eot');
+  src: local('Manrope Semibold'), local('Manrope-Semibold'),
+      url('../assets/fonts/Manrope-Semibold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Manrope-Semibold.woff2') format('woff2'),
+      url('../assets/fonts/Manrope-Semibold.woff') format('woff'),
+      url('../assets/fonts/Manrope-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope-Bold.eot');
+  src: local('Manrope Bold'), local('Manrope-Bold'),
+      url('../assets/fonts/Manrope-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Manrope-Bold.woff2') format('woff2'),
+      url('../assets/fonts/Manrope-Bold.woff') format('woff'),
+      url('../assets/fonts/Manrope-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../assets/fonts/Manrope-ExtraBold.eot');
+  src: local('Manrope ExtraBold'), local('Manrope-ExtraBold'),
+      url('../assets/fonts/Manrope-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Manrope-ExtraBold.woff2') format('woff2'),
+      url('../assets/fonts/Manrope-ExtraBold.woff') format('woff'),
+      url('../assets/fonts/Manrope-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  // max-width: 1920px;
+  margin: 0 auto;
+  background-color: @color-white;
+  font-family: "Manrope", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: normal;
+  color: @text-canvas;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+}
